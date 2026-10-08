@@ -369,26 +369,35 @@ Happy Teachers' Day po! ❤️
 
 Me and Angel would like to take this opportunity to say thank you for everything, Sir. Thank you for always supporting us, helping us, and most importantly, for always being there for your students.
 
-And of course, Sir, we cannot forget the libre sa empanada and sa mee goreng. WHAHAHAHA. Thank you kaayo, Sir! Those little things may seem simple, but honestly, they are some of the moments that we will remember. It is not really about the food itself, but the thought and kindness behind it. You have always had this way of making your students feel cared for.
+And of course, Sir, we cannot forget the libre sa empanada and sa mee goreng. WHAHAHAHA. Thank you kaayo, Sir! Those little things may seem simple, but honestly, they are some of the moments that we will always remember. It is not really about the food itself, but the thought and kindness behind it. You have always had this way of making your students feel cared for.
 
-But beyond all the jokes and libre, we really want you to know how much we appreciate you as a teacher. You are one of the most accountable, responsible, dedicated, and passionate teachers we have ever met. You take your responsibility seriously, and you can really see how much effort and heart you put into teaching.
+But beyond all the jokes and libre, I also want to personally say how much I cherish the friendship we have built with you, Sir. This is Angel, and I am really thankful that our relationship became more than just teacher and student. The conversations, jokes, random moments, and all the times we got to talk and spend time together are memories that I genuinely treasure.
+
+I really cherish those moments po, Sir. Sometimes, it is the simple conversations and random experiences that become the memories we remember the most. I am grateful that throughout our college journey, I got to know you not only as our teacher but also as someone we could talk to and consider a friend.
+
+And that is one of the things I will always appreciate about you. You made it easy for your students to feel comfortable around you. You care about us not only as students but also as people, and that is something that I will always remember.
+
+As a teacher, you are one of the most accountable, responsible, dedicated, and passionate teachers we have ever met. You take your responsibility seriously, and you can really see how much effort and heart you put into teaching.
 
 What makes you even more special as a teacher is how you care about your students. You do not only focus on the students who are active or always participating. You make sure that even the quietest students have a chance to understand, speak, and be part of the class.
 
 That is something we really admire about you, Sir. You have this way of teaching that makes students feel included. You explain things in a way that helps everyone follow, and you are patient enough to make sure that no one gets left behind.
 
-It is no surprise that you are loved by many of your students. Your dedication and the way you genuinely care for them are things that students can feel. You are not just teaching because it is your job. You teach because you really want your students to learn and become better.
+It is no surprise that you are loved by many of your students. Your dedication and the way you genuinely care for them are things that students can feel. You are not just teaching because it is your job. You teach because you genuinely want your students to learn and become better.
 
-Me and Angel are truly thankful that we got to experience your teaching. Thank you for all the lessons, the support, the patience, the reminders, and even the random moments that made our college days more memorable.
+Me and Angel are truly thankful that we got to experience your teaching. Thank you for all the lessons, the support, the patience, the reminders, the friendship, and even the random moments that made our college days more memorable.
 
-And Sir, thank you for always being generous and thoughtful. From the empanada to the mee goreng, WHAHAHAHA, those memories will definitely stay with us. But more than the food, we will remember the kind of teacher you are and the way you made your students feel valued.
+And Sir, congratulations pud diay on being accepted and officially becoming part of DepEd! We are really happy and proud of you because you truly deserve this new opportunity. After all the hard work and dedication you have given to teaching, it is nice to see you reach another milestone in your career.
 
-Thank you for being a teacher who shows up, cares, teaches with passion, and makes sure that everyone gets a chance to learn.
+Daku na jud ang sweldo, Sir. Paldo na jud! WHAHAHAHA. At least karon, dili na lang libre sa empanada ug mee goreng ang kaya. WHAHAHAHA. But seriously, we are genuinely happy for you and we hope this new chapter brings you more success, happiness, and opportunities.
 
-Happy Teachers' Day, Sir Al! We are very grateful to have learned from you, and we hope you know that all your efforts and sacrifices for your students are truly appreciated. ❤️
+Thank you for being a teacher who shows up, cares, teaches with passion, and makes sure that everyone gets a chance to learn. And thank you for being someone who became more than just a teacher to us.
 
-Daghang salamat, Sir, for everything. We will always be thankful that we got to have you as one of our teachers. And yes, Sir, thank you gihapon sa empanada ug mee goreng. WHAHAHAHA. ❤️
+Happy Teachers' Day, Sir Al! We are very grateful to have learned from you, and I am especially grateful for all the memories and friendship that I got to build with you. I will always cherish those moments po. ❤️
 
+Daghang salamat, Sir, for everything. We will always be thankful that we got to have you as one of our teachers and someone we can also call a friend.
+
+And yes, Sir, thank you gihapon sa empanada ug mee goreng. WHAHAHAHA. Congratulations again on DepEd, Sir! Daku na jud ang sweldo. Paldo na jud! You deserve it. ❤️
 
 
 `

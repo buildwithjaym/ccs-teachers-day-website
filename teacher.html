@@ -1,102 +1,268 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover" />
-  <title>Happy Teachers' Day</title>
+  <head>
+    <meta charset="UTF-8" />
 
-  <link rel="stylesheet" href="teacher.css" />
-  <link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
-  <script src="https://unpkg.com/lucide@latest"></script>
-</head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-<body>
-  <div class="grid"></div>
+    <title>Happy Teacher's Day | Appreciation Vault</title>
 
-  <!-- Transition Overlay -->
-  <div class="transition" id="transition">
-    <h1>ACCESS GRANTED</h1>
-    <p>Preparing your appreciation vault...</p>
-  </div>
+    <link rel="stylesheet" href="teacher.css" />
 
-  <div id="particles"></div>
-  <audio id="music"></audio>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      rel="stylesheet"
+    />
 
-  <main class="page">
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
 
-    <!-- HERO -->
-    <section class="hero">
-      <p class="subtitle">A SPECIAL TRIBUTE FROM YOUR STUDENTS</p>
+  <body>
+    <!-- BACKGROUND -->
 
-      <h1 class="happy">
-        HAPPY
-        <br />
-        <span>TEACHERS' DAY</span>
-      </h1>
+    <div class="background-grid"></div>
 
-      <p class="hero-text">
-        Celebrating the mentors who inspire, guide, and make a lasting difference.
-      </p>
+    <div id="heart-container"></div>
 
-      <div class="scroll">
-        <i data-lucide="chevron-down"></i>
-        <span>Scroll to continue</span>
-      </div>
-    </section>
+    <!-- INTRO SCREEN -->
 
-    <!-- TEACHER -->
-    <section class="teacher-section">
-      <div class="photo-ring">
-        <img id="teacherImage" src="" alt="Teacher" />
-      </div>
+    <div class="transition-screen">
+      <h1>ACCESS GRANTED</h1>
 
-      <h2 id="teacherName">Teacher</h2>
-      <p class="opened-text">Your appreciation vault has been opened.</p>
-    </section>
+      <p>Preparing your appreciation vault...</p>
+    </div>
 
-    <!-- LETTER -->
-    <section class="letter-section">
-      <h2 class="section-title">A Letter Prepared For You</h2>
-      <p class="instruction">Click the envelope to reveal your message.</p>
+    <!-- MUSIC -->
 
-      <div class="envelope" id="envelope">
-        <!-- Paper (letter content) -->
-        <div class="paper">
-          <h2>Dear <span id="letterName">Teacher</span>,</h2>
-          <p id="message"></p>
-          <div class="signature">
-            With appreciation,<br />
-            Angel &amp; Jaymar
+    <audio id="teacherMusic"></audio>
+
+    <main class="teacher-page">
+      <!-- HERO -->
+
+      <section class="hero-section">
+        <div class="hero-content">
+          <p class="hero-label">A SPECIAL TRIBUTE FROM YOUR STUDENTS</p>
+
+          <h1 class="hero-title">
+            <span> HAPPY </span>
+
+            <span> TEACHERS' DAY </span>
+          </h1>
+
+          <p class="hero-description">
+            Celebrating the teachers who inspire, guide, and make a lasting
+            difference.
+          </p>
+
+          <div class="scroll-indicator">
+            <i data-lucide="chevron-down"></i>
+
+            <span> Scroll to continue </span>
           </div>
         </div>
+      </section>
 
-        <!-- Flap -->
-        <div class="flap"></div>
+      <!-- TEACHER PROFILE -->
 
-        <!-- Envelope front -->
-        <div class="envelope-body">
-          <div class="seal">
-            <i data-lucide="heart"></i>
+      <section class="teacher-section">
+        <div class="teacher-card">
+          <div class="teacher-image-wrapper">
+            <img id="teacherImage" src="" alt="Teacher" />
           </div>
-          <h3>A Letter For You</h3>
-          <button id="open">OPEN LETTER</button>
+
+          <h2 id="teacherName">Teacher Name</h2>
+
+          <p>Your appreciation vault has been unlocked.</p>
+
+          <div class="teacher-badge">
+            <i data-lucide="sparkles"></i>
+
+            <span> SPECIAL EDUCATOR </span>
+          </div>
         </div>
-      </div>
-    </section>
+      </section>
 
-    <!-- ENDING -->
-    <section class="ending">
-      <h2>Thank You For Making A Difference</h2>
-      <p>
-        The lessons you shared will continue through every student you inspired.
-      </p>
-    </section>
+      <!-- LETTER -->
 
-  </main>
+      <section class="letter-section">
+        <div class="letter-heading">
+          <h2>A Letter Prepared For You</h2>
 
-  <script src="teacher.js"></script>
-  <script>
-    lucide.createIcons();
-  </script>
-</body>
+          <p>A message created with gratitude.</p>
+        </div>
+
+        <div class="envelope-shell" id="envelope">
+          <!-- PAPER -->
+
+          <div class="letter-paper">
+            <button class="close-letter" id="closeLetter">
+              <i data-lucide="x"></i>
+            </button>
+
+            <div class="letter-inner">
+              <p class="letter-date">Happy Teachers' Day</p>
+
+              <h3 class="letter-greeting">
+                Dear
+                <span id="letterName"> Teacher </span>,
+              </h3>
+
+              <div id="message" class="letter-body"></div>
+
+              <div class="letter-signoff">
+                <p>With love and appreciation,</p>
+
+                <p class="letter-from">Angel &amp; Jaymar</p>
+              </div>
+            </div>
+          </div>
+
+          <!-- ENVELOPE -->
+
+          <div class="envelope-back"></div>
+
+          <div class="envelope-pocket"></div>
+
+          <div class="envelope-flap"></div>
+
+          <div class="envelope-front">
+            <div class="heart-seal">
+              <i data-lucide="heart"></i>
+            </div>
+
+            <h3>A Letter For You</h3>
+
+            <button id="openLetter" type="button">OPEN LETTER</button>
+          </div>
+        </div>
+      </section>
+
+      <!-- END -->
+
+      <section class="ending-section">
+        <div class="ending-card">
+          <i data-lucide="heart-handshake"></i>
+
+          <h2>Thank You For Making A Difference</h2>
+
+          <p>Your impact continues through every student you inspired.</p>
+        </div>
+      </section>
+    </main>
+    <!-- FOOTER -->
+
+<footer class="footer-section">
+
+
+<div class="footer-content">
+
+
+<i data-lucide="heart" class="footer-icon"></i>
+
+
+
+<p class="footer-title">
+
+Made with love
+
+</p>
+
+
+
+<p class="footer-text">
+
+Happy Teachers' Day
+
+</p>
+
+
+
+<div class="footer-creators">
+
+
+<span>
+Created by
+</span>
+
+
+<a 
+href="https://jaymmaruji.online"
+target="_blank">
+
+Jaymar Maruji
+
+</a>
+
+
+<span>
+&
+</span>
+
+
+<a
+href="https://angel-moreno-portfolio.vercel.app/"
+target="_blank">
+
+Angel Moreno
+
+</a>
+
+
+</div>
+
+
+
+
+
+<div class="footer-links">
+
+
+<a
+href="https://jaymmaruji.online"
+target="_blank">
+
+jaymmaruji.online
+
+</a>
+
+
+
+<span>
+•
+</span>
+
+
+
+<a
+href="https://angel-moreno-portfolio.vercel.app/"
+target="_blank">
+
+angel-moreno-portfolio.vercel.app
+
+</a>
+
+
+</div>
+
+
+
+<p class="footer-copy">
+
+© 2026 Appreciation Vault
+
+</p>
+
+
+
+</div>
+
+
+</footer>
+
+    <script src="teacher.js"></script>
+
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
 </html>

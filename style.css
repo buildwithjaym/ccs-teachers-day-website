@@ -1,0 +1,497 @@
+:root {
+  --maroon-950: #250006;
+  --maroon-900: #3A0812;
+  --maroon-800: #560B19;
+  --maroon-700: #720F23;
+  --maroon-600: #8F2030;
+  --maroon-500: #B52B45;
+
+  --pink-soft: #FBECEF;
+  --pink: #F2C7D1;
+
+  --white: #FFFFFF;
+  --gray: #6B7280;
+
+  --shadow: 0 20px 50px rgba(37, 0, 6, 0.28);
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  height: 100%;
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  min-height: 100%;
+  min-height: 100dvh;
+  font-family: "Inter", system-ui, -apple-system, sans-serif;
+  background: linear-gradient(135deg, var(--maroon-950), var(--maroon-800));
+  color: white;
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Background effects */
+.grid-background {
+  position: fixed;
+  inset: 0;
+  background-image:
+    linear-gradient(rgba(255, 255, 255, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.05) 1px, transparent 1px);
+  background-size: 40px 40px;
+  animation: gridMove 22s linear infinite;
+  pointer-events: none;
+  z-index: 0;
+}
+
+@keyframes gridMove {
+  from { transform: translateY(0); }
+  to   { transform: translateY(40px); }
+}
+
+.scan-line {
+  position: fixed;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: linear-gradient(90deg, transparent, #F2C7D1, transparent);
+  animation: scan 7s infinite;
+  pointer-events: none;
+  z-index: 1;
+}
+
+@keyframes scan {
+  0%   { top: 0; opacity: 0; }
+  40%  { opacity: 0.9; }
+  100% { top: 100%; opacity: 0; }
+}
+
+/* ========== Main Layout ========== */
+.vault-page {
+  position: relative;
+  z-index: 2;
+  min-height: 100dvh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 14px 20px;
+  gap: 18px;
+}
+
+/* ========== Brand ========== */
+.brand {
+  text-align: center;
+  max-width: 420px;
+  flex-shrink: 0;
+}
+
+.logo {
+  width: 72px;
+  height: 72px;
+  border-radius: 50%;
+  object-fit: cover;
+  box-shadow: 0 0 28px rgba(242, 199, 209, 0.4);
+  display: block;
+  margin: 0 auto;
+  animation: logoGlow 4s ease-in-out infinite;
+}
+
+@keyframes logoGlow {
+  0%, 100% { box-shadow: 0 0 22px rgba(242, 199, 209, 0.35); }
+  50%      { box-shadow: 0 0 38px rgba(242, 199, 209, 0.55); }
+}
+
+.brand h1 {
+  margin-top: 12px;
+  font-size: 1.55rem;
+  font-weight: 700;
+  letter-spacing: -0.5px;
+  line-height: 1.2;
+}
+
+.brand p {
+  margin-top: 8px;
+  color: var(--pink-soft);
+  font-size: 0.85rem;
+  line-height: 1.5;
+  max-width: 340px;
+  margin-inline: auto;
+}
+
+/* ========== Verification Card ========== */
+.verification-card {
+  width: 100%;
+  max-width: 380px;
+  padding: 22px 18px 20px;
+  border-radius: 24px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  box-shadow: var(--shadow);
+  text-align: center;
+  animation: cardEnter 0.65s ease-out;
+}
+
+@keyframes cardEnter {
+  from {
+    opacity: 0;
+    transform: translateY(18px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.security-icon {
+  width: 48px;
+  height: 48px;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(242, 199, 209, 0.15);
+  border-radius: 50%;
+  color: #F2C7D1;
+  animation: iconPulse 3.2s ease-in-out infinite;
+}
+
+.security-icon svg {
+  width: 24px;
+  height: 24px;
+}
+
+@keyframes iconPulse {
+  0%, 100% { transform: scale(1); }
+  50%      { transform: scale(1.07); }
+}
+
+.status {
+  display: block;
+  margin-top: 12px;
+  font-size: 0.65rem;
+  letter-spacing: 2.5px;
+  color: var(--pink);
+  font-weight: 500;
+}
+
+.verification-card h2 {
+  font-size: 1.4rem;
+  margin: 8px 0 10px;
+  font-weight: 700;
+  line-height: 1.25;
+}
+
+.description {
+  color: #f5dfe3;
+  font-size: 0.8rem;
+  line-height: 1.55;
+  margin-bottom: 4px;
+}
+
+/* Input */
+.input-group {
+  margin-top: 16px;
+  text-align: left;
+}
+
+.input-group label {
+  font-size: 0.65rem;
+  letter-spacing: 1.8px;
+  color: var(--pink-soft);
+  display: block;
+  margin-bottom: 6px;
+}
+
+.input-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: white;
+  padding: 11px 14px;
+  border-radius: 14px;
+  color: var(--maroon-800);
+  transition: box-shadow 0.2s ease;
+}
+
+.input-wrapper:focus-within {
+  box-shadow: 0 0 0 3px rgba(242, 199, 209, 0.5);
+}
+
+.input-wrapper svg {
+  width: 18px;
+  height: 18px;
+  flex-shrink: 0;
+  opacity: 0.8;
+}
+
+.input-wrapper input {
+  border: none;
+  outline: none;
+  width: 100%;
+  font-size: 1.15rem;
+  text-align: center;
+  letter-spacing: 0.4em;
+  background: transparent;
+  color: var(--maroon-800);
+  font-weight: 600;
+}
+
+.input-wrapper input::placeholder {
+  letter-spacing: 0.35em;
+  color: #b0a0a5;
+  font-weight: 500;
+}
+
+/* Button */
+button#verifyButton {
+  margin-top: 16px;
+  width: 100%;
+  padding: 13px 16px;
+  border: none;
+  border-radius: 50px;
+  background: linear-gradient(135deg, var(--maroon-600), var(--maroon-500));
+  color: white;
+  font-weight: 700;
+  font-size: 0.9rem;
+  cursor: pointer;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+button#verifyButton:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(181, 43, 69, 0.45);
+}
+
+button#verifyButton:active {
+  transform: translateY(0);
+}
+
+button#verifyButton svg {
+  width: 18px;
+  height: 18px;
+}
+
+#errorMessage {
+  margin-top: 10px;
+  color: #ffd1d8;
+  font-size: 0.8rem;
+  min-height: 1.1em;
+}
+
+/* Footer */
+footer {
+  text-align: center;
+  color: #e8cbd1;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  flex-shrink: 0;
+  opacity: 0.9;
+}
+
+footer strong {
+  font-weight: 600;
+}
+
+/* ========== Responsive – larger phones ========== */
+@media (min-width: 400px) {
+  .logo {
+    width: 80px;
+    height: 80px;
+  }
+
+  .brand h1 {
+    font-size: 1.7rem;
+  }
+
+  .brand p {
+    font-size: 0.9rem;
+  }
+
+  .verification-card {
+    padding: 26px 22px 22px;
+    max-width: 400px;
+  }
+
+  .verification-card h2 {
+    font-size: 1.5rem;
+  }
+
+  .description {
+    font-size: 0.85rem;
+  }
+}
+
+/* ========== Tablets & up ========== */
+@media (min-width: 600px) {
+  .vault-page {
+    padding: 24px 20px;
+    gap: 24px;
+  }
+
+  .logo {
+    width: 96px;
+    height: 96px;
+  }
+
+  .brand h1 {
+    font-size: 2rem;
+    margin-top: 14px;
+  }
+
+  .brand p {
+    font-size: 0.95rem;
+    max-width: 420px;
+  }
+
+  .verification-card {
+    max-width: 440px;
+    padding: 32px 28px 26px;
+    border-radius: 28px;
+  }
+
+  .security-icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .security-icon svg {
+    width: 28px;
+    height: 28px;
+  }
+
+  .status {
+    font-size: 0.7rem;
+    margin-top: 14px;
+  }
+
+  .verification-card h2 {
+    font-size: 1.7rem;
+    margin: 10px 0 12px;
+  }
+
+  .description {
+    font-size: 0.9rem;
+    line-height: 1.6;
+  }
+
+  .input-group {
+    margin-top: 20px;
+  }
+
+  .input-wrapper {
+    padding: 13px 16px;
+  }
+
+  .input-wrapper input {
+    font-size: 1.25rem;
+  }
+
+  button#verifyButton {
+    margin-top: 20px;
+    padding: 15px;
+    font-size: 0.95rem;
+  }
+
+  footer {
+    font-size: 0.8rem;
+  }
+}
+
+/* ========== Short screens (small phones in landscape or very short) ========== */
+@media (max-height: 700px) {
+  .vault-page {
+    gap: 12px;
+    padding-top: 12px;
+    padding-bottom: 14px;
+  }
+
+  .logo {
+    width: 58px;
+    height: 58px;
+  }
+
+  .brand h1 {
+    font-size: 1.35rem;
+    margin-top: 8px;
+  }
+
+  .brand p {
+    font-size: 0.8rem;
+    margin-top: 6px;
+  }
+
+  .verification-card {
+    padding: 16px 16px 14px;
+  }
+
+  .security-icon {
+    width: 42px;
+    height: 42px;
+  }
+
+  .security-icon svg {
+    width: 20px;
+    height: 20px;
+  }
+
+  .status {
+    margin-top: 8px;
+    font-size: 0.6rem;
+  }
+
+  .verification-card h2 {
+    font-size: 1.25rem;
+    margin: 6px 0 8px;
+  }
+
+  .description {
+    font-size: 0.75rem;
+    line-height: 1.45;
+  }
+
+  .input-group {
+    margin-top: 12px;
+  }
+
+  .input-wrapper {
+    padding: 9px 12px;
+  }
+
+  button#verifyButton {
+    margin-top: 12px;
+    padding: 11px;
+    font-size: 0.85rem;
+  }
+
+  footer {
+    font-size: 0.7rem;
+  }
+}
+
+/* ========== Very small phones ========== */
+@media (max-width: 340px) {
+  .brand h1 {
+    font-size: 1.3rem;
+  }
+
+  .verification-card h2 {
+    font-size: 1.2rem;
+  }
+
+  .input-wrapper input {
+    font-size: 1.05rem;
+    letter-spacing: 0.3em;
+  }
+}

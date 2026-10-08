@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, viewport-fit=cover"
+    />
+    <title>CCS Appreciation Vault | Teacher Verification</title>
+    <link rel="stylesheet" href="style.css" />
+    <script src="https://unpkg.com/lucide@latest"></script>
+  </head>
+
+  <body>
+    <div class="grid-background"></div>
+    <div class="scan-line"></div>
+
+    <main class="vault-page">
+      <section class="brand">
+        <img
+          src="images/logo.jpg"
+          alt="College of Computing Studies Logo"
+          class="logo"
+        />
+        <h1>CCS Appreciation Vault</h1>
+        <p>
+          A secured digital tribute created for the teachers who shaped our
+          journey.
+        </p>
+      </section>
+
+      <section class="verification-card">
+        <div class="security-icon">
+          <i data-lucide="shield-check"></i>
+        </div>
+
+        <span class="status">SECURE ACCESS SYSTEM</span>
+
+        <h2>Teacher Verification</h2>
+
+        <p class="description">
+          This appreciation vault was lovingly created by the two of us,
+          especially for you. Inside are messages of gratitude and appreciation,
+          hoping to remind you how much your guidance and dedication mean to us.
+          We hope you’ll cherish this little gift.
+        </p>
+
+        <div class="input-group">
+          <label>PERSONAL ACCESS KEY</label>
+          <div class="input-wrapper">
+            <i data-lucide="key-round"></i>
+            <input
+              id="accessKey"
+              type="password"
+              maxlength="4"
+              placeholder="XXXX"
+              inputmode="numeric"
+              autocomplete="off"
+            />
+          </div>
+        </div>
+
+        <button id="verifyButton">
+          <i data-lucide="lock-open"></i>
+          Authenticate Access
+        </button>
+
+        <p id="errorMessage"></p>
+      </section>
+
+      <footer>
+        <p>
+          Created with appreciation by
+          <strong>Angel &amp; Jaymar</strong>
+        </p>
+        <p>College of Computing Studies</p>
+      </footer>
+    </main>
+
+    <script src="script.js"></script>
+    <script>
+      lucide.createIcons();
+    </script>
+  </body>
+</html>

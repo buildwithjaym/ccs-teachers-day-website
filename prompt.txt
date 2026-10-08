@@ -1,0 +1,814 @@
+
+
+
+# YOU MADE A DIFFERENCE — TEACHERS' DAY WEBSITE
+
+Act as a senior frontend developer, UI/UX designer, and creative web designer.
+
+Build a beautiful, emotional, modern, and fully responsive Teachers' Day website called:
+
+# "You Made a Difference"
+
+### Tagline:
+
+**Every teacher leaves something behind.**
+
+The website is created by students as a digital tribute to their teachers.
+
+The goal is NOT to build a complicated platform. This is a simple, polished static website focused on one meaningful experience:
+
+**Students can visit the website, choose a teacher, and read the messages written specifically for that teacher.**
+
+---
+
+# 1. TECHNOLOGY REQUIREMENTS
+
+Use ONLY:
+
+* HTML5
+* CSS3
+* Vanilla JavaScript
+
+Do NOT use:
+
+* React
+* Next.js
+* Vue
+* Angular
+* Tailwind
+* Bootstrap
+* jQuery
+* Any frontend framework
+* Any backend
+* Any database
+
+The website must work as a static website.
+
+Use JavaScript for:
+
+* teacher data
+* message data
+* teacher selection
+* dynamic rendering
+* navigation
+* filtering
+* animations
+* mobile menu
+* URL-based teacher pages if appropriate
+
+---
+
+# 2. PROJECT STRUCTURE
+
+Use a clean structure similar to:
+
+```text
+/
+├── index.html
+├── teacher.html
+│
+├── css/
+│   ├── style.css
+│   └── responsive.css
+│
+├── js/
+│   ├── main.js
+│   ├── teachers.js
+│   └── messages.js
+│
+├── images/
+│   ├── logo/
+│   ├── teachers/
+│   ├── backgrounds/
+│   └── decorations/
+│
+└── README.md
+```
+
+Keep the code organized and easy for a student developer to modify.
+
+---
+
+# 3. WEBSITE STRUCTURE
+
+There should only be TWO main experiences.
+
+## PAGE 1 — LANDING PAGE
+
+`index.html`
+
+Purpose:
+
+Introduce the project emotionally and allow visitors to select a teacher.
+
+Sections:
+
+### A. Navigation
+
+Minimal navigation:
+
+```text
+[ Logo / You Made a Difference ]
+
+Home
+Teachers
+```
+
+Primary button:
+
+```text
+View Teachers
+```
+
+On mobile, convert navigation into a clean hamburger menu.
+
+---
+
+# 4. LANDING PAGE HERO
+
+The hero section should be the strongest visual section.
+
+Use this copy:
+
+### Small label:
+
+**A Teachers' Day Tribute**
+
+### Main heading:
+
+**You may not remember every student.**
+
+**You may not remember every lesson.**
+
+**But somewhere along the way...**
+
+### Highlighted handwritten/elegant text:
+
+# You Made a Difference.
+
+### Supporting text:
+
+> A collection of messages from the students whose lives you touched.
+
+Buttons:
+
+```text
+[ Meet Our Teachers ]
+
+[ Read Their Messages ]
+```
+
+The hero should feel emotional, warm, sophisticated, and personal.
+
+Do NOT make it look like a generic school announcement.
+
+---
+
+# 5. LANDING PAGE VISUAL DIRECTION
+
+Use a warm editorial aesthetic.
+
+The visual language should feel like:
+
+**handwritten letters + classroom memories + modern digital editorial design**
+
+Use:
+
+* warm ivory background
+* soft beige
+* muted sage/green
+* charcoal typography
+* subtle brown accents
+* paper textures
+* soft shadows
+* elegant serif typography
+* clean sans-serif body text
+* subtle handwritten typography
+* tasteful photography
+
+Avoid:
+
+* overly bright colors
+* excessive gradients
+* cartoon-style illustrations
+* excessive animations
+* generic stock-style school graphics
+* huge numbers
+* excessive cards
+* clutter
+
+The website should feel calm and heartfelt.
+
+---
+
+# 6. LANDING PAGE — INTRODUCTION SECTION
+
+After the hero:
+
+## Heading:
+
+**For every teacher who showed up.**
+
+Text:
+
+> For every lesson you patiently explained again.
+>
+> For every “Kaya mo 'yan.”
+>
+> For every correction that helped us improve.
+>
+> For every moment you believed in us before we believed in ourselves.
+>
+> This is our way of saying thank you.
+
+Then a visual handwritten-style statement:
+
+> **You taught us more than a subject.**
+
+Keep this section visually spacious.
+
+---
+
+# 7. LANDING PAGE — TEACHER SECTION
+
+Create a section:
+
+# Meet the Teachers
+
+Subtitle:
+
+> Choose a teacher and discover the words their students wanted them to hear.
+
+Display teachers in a responsive grid.
+
+Each teacher card should include:
+
+* teacher photo
+* teacher name
+* department/subject
+* subtle hover animation
+* "Read Messages →" button
+
+Example:
+
+```text
+┌──────────────────────────┐
+│                          │
+│       TEACHER PHOTO      │
+│                          │
+├──────────────────────────┤
+│ Maria Santos             │
+│ College of Education     │
+│                          │
+│ Read Messages →          │
+└──────────────────────────┘
+```
+
+Cards should NOT feel like generic profile cards.
+
+Make them resemble elegant printed photographs or memory cards.
+
+---
+
+# 8. TEACHER DATA
+
+Store teacher information inside:
+
+```text
+js/teachers.js
+```
+
+Example:
+
+```javascript
+const teachers = [
+    {
+        id: "maria-santos",
+        name: "Maria Santos",
+        department: "College of Education",
+        image: "images/teachers/maria-santos.jpg"
+    },
+    {
+        id: "juan-dela-cruz",
+        name: "Juan Dela Cruz",
+        department: "College of Computing",
+        image: "images/teachers/juan-dela-cruz.jpg"
+    }
+];
+```
+
+Make it extremely easy to add more teachers later.
+
+---
+
+# 9. TEACHER MESSAGE PAGE
+
+`teacher.html`
+
+This page is dynamically populated based on the selected teacher.
+
+For example:
+
+```text
+teacher.html?id=maria-santos
+```
+
+JavaScript should read the URL parameter and display the correct teacher.
+
+---
+
+# 10. TEACHER PAGE HERO
+
+At the top:
+
+Teacher photograph
+
+Then:
+
+### A message for
+
+# Maria Santos
+
+Department:
+
+**College of Education**
+
+Then:
+
+> These are the words your students wanted you to hear.
+
+Keep the presentation elegant.
+
+---
+
+# 11. MESSAGE SECTION
+
+Heading:
+
+# Words From Your Students
+
+Subtitle:
+
+> Sometimes, the smallest words carry the biggest meaning.
+
+Display messages as beautiful letter-like cards.
+
+Example:
+
+```text
+┌───────────────────────────────────┐
+│                                   │
+│  "You probably don't know this,  │
+│   but your encouragement helped   │
+│   me keep going when I wanted     │
+│   to give up."                    │
+│                                   │
+│                  — A grateful     │
+│                    student        │
+│                                   │
+└───────────────────────────────────┘
+```
+
+Messages should NOT look like social media posts.
+
+They should look like handwritten letters or small pieces of paper.
+
+---
+
+# 12. MESSAGE CATEGORIES
+
+Each teacher can have messages belonging to categories:
+
+```text
+memory
+lesson
+thank-you
+probably-dont-know
+inspiration
+```
+
+At the top of the message section, provide simple filters:
+
+```text
+All
+Memories
+Lessons
+Thank You
+You Probably Don't Know
+```
+
+Filtering should happen entirely with Vanilla JavaScript.
+
+No page reload.
+
+---
+
+# 13. MESSAGE DATA
+
+Store messages inside:
+
+```text
+js/messages.js
+```
+
+Example:
+
+```javascript
+const messages = [
+    {
+        id: 1,
+        teacherId: "maria-santos",
+        category: "probably-dont-know",
+        message: "You probably don't know this, but your simple encouragement gave me the courage to keep going.",
+        author: "A grateful student"
+    },
+
+    {
+        id: 2,
+        teacherId: "maria-santos",
+        category: "memory",
+        message: "I'll always remember how you made every difficult lesson feel possible.",
+        author: "Your student"
+    }
+];
+```
+
+Make the data structure easy to edit.
+
+---
+
+# 14. TEACHER PAGE — EMPTY STATE
+
+If a teacher has no messages yet, do NOT leave a blank page.
+
+Show:
+
+> **The first message is still waiting to be written.**
+
+Then:
+
+> Maybe you could be the one to leave it.
+
+Button:
+
+**Back to Teachers**
+
+For now, do NOT build a message submission system.
+
+This version of the website is only for displaying prepared messages.
+
+---
+
+# 15. FINAL SECTION ON TEACHER PAGE
+
+After all messages:
+
+## A final note
+
+> You may never know every moment you made a difference.
+>
+> You may never know every student who carried your words with them.
+>
+> But somewhere, someone remembers.
+>
+> **Thank you for making a difference.**
+
+Button:
+
+**← Back to All Teachers**
+
+---
+
+# 16. LANDING PAGE FOOTER
+
+Keep it minimal.
+
+```text
+You Made a Difference
+
+A Teachers' Day tribute created with gratitude by students.
+
+Happy Teachers' Day 2026. ❤️
+```
+
+Do not make the footer oversized.
+
+---
+
+# 17. RESPONSIVENESS — VERY IMPORTANT
+
+The website MUST be responsive.
+
+Design mobile-first.
+
+It must work beautifully on:
+
+* 320px phones
+* 375px phones
+* 390px phones
+* 430px phones
+* tablets
+* laptops
+* large desktop monitors
+
+Do NOT simply shrink the desktop design.
+
+Actually redesign layouts for mobile.
+
+### Mobile requirements:
+
+* navigation becomes hamburger
+* cards become one column
+* typography scales appropriately
+* buttons become easy to tap
+* images maintain correct proportions
+* message cards fit naturally
+* no horizontal scrolling
+* no overflowing text
+* no elements touching screen edges
+* generous but appropriate spacing
+
+Test the layout mentally at:
+
+```text
+320px
+375px
+768px
+1024px
+1440px
+```
+
+---
+
+# 18. RESPONSIVE BREAKPOINTS
+
+Use clean CSS media queries.
+
+For example:
+
+```css
+/* Mobile */
+default
+
+/* Tablet */
+@media (min-width: 768px)
+
+/* Desktop */
+@media (min-width: 1024px)
+
+/* Large Desktop */
+@media (min-width: 1440px)
+```
+
+Avoid creating dozens of breakpoints.
+
+---
+
+# 19. ANIMATIONS
+
+Use subtle animations only.
+
+Examples:
+
+* hero text fade-up
+* cards gently reveal on scroll
+* image scale on hover
+* button hover movement
+* message cards fade in
+* subtle envelope/paper movement
+* smooth scrolling
+
+Use CSS transitions and IntersectionObserver where useful.
+
+Do NOT make everything move.
+
+The website should feel:
+
+**quiet, elegant, emotional.**
+
+---
+
+# 20. ACCESSIBILITY
+
+Implement good accessibility:
+
+* semantic HTML
+* alt text for images
+* proper heading hierarchy
+* keyboard navigation
+* visible focus states
+* accessible buttons
+* sufficient color contrast
+* `aria-label` where appropriate
+* reduced-motion support
+
+Include:
+
+```css
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms;
+        animation-iteration-count: 1;
+        transition-duration: 0.01ms;
+        scroll-behavior: auto;
+    }
+}
+```
+
+---
+
+# 21. IMAGE HANDLING
+
+All images should come from the `/images` directory.
+
+Do NOT embed external image URLs.
+
+Use meaningful image paths such as:
+
+```text
+images/teachers/maria-santos.jpg
+images/teachers/juan-dela-cruz.jpg
+images/hero/hero-classroom.jpg
+```
+
+Use responsive image behavior:
+
+```css
+img {
+    max-width: 100%;
+    height: auto;
+}
+```
+
+Teacher portraits should use consistent aspect ratios.
+
+Use `object-fit: cover` where appropriate.
+
+---
+
+# 22. DESIGN DETAILS
+
+Use CSS variables:
+
+```css
+:root {
+    --color-background: #F7F3EA;
+    --color-surface: #EFE8DB;
+    --color-primary: #26382C;
+    --color-text: #242421;
+    --color-muted: #6F6B61;
+    --color-accent: #B98B63;
+    --color-border: #DDD4C5;
+
+    --font-display: ...;
+    --font-body: ...;
+}
+```
+
+Keep the visual system centralized so it is easy to modify later.
+
+---
+
+# 23. IMPORTANT UX PRINCIPLE
+
+Do NOT make this feel like a school management system.
+
+It should NOT look like:
+
+* an admin dashboard
+* a student portal
+* a database interface
+* a social network
+* a generic event website
+
+It should feel like:
+
+> **Opening a collection of letters written specifically for teachers.**
+
+Every design decision should support that feeling.
+
+---
+
+# 24. PERFORMANCE
+
+Keep the website lightweight.
+
+* Vanilla JavaScript
+* no unnecessary libraries
+* lazy-load non-critical images
+* avoid huge image files
+* use CSS instead of JavaScript when possible
+* minimize unnecessary DOM manipulation
+* avoid autoplay video
+* avoid heavy animation libraries
+
+The site should load quickly even on mobile internet.
+
+---
+
+# 25. URL BEHAVIOR
+
+Teacher cards should open:
+
+```text
+teacher.html?id=maria-santos
+```
+
+The JavaScript should:
+
+1. Read the `id` query parameter.
+2. Find the teacher in `teachers.js`.
+3. Display their information.
+4. Find all messages belonging to that teacher.
+5. Render those messages.
+6. Enable category filtering.
+7. Show an empty state if there are no messages.
+
+If an invalid teacher ID is provided:
+
+```text
+teacher.html?id=does-not-exist
+```
+
+show a friendly error page:
+
+> **We couldn't find that teacher.**
+
+Button:
+
+**Back to Teachers**
+
+---
+
+# 26. CODE QUALITY
+
+Write clean, beginner-friendly code.
+
+Use:
+
+* descriptive variable names
+* reusable functions
+* comments only where useful
+* no unnecessary complexity
+* modular JavaScript
+* semantic HTML
+* organized CSS
+
+Avoid putting everything inside one huge JavaScript file.
+
+---
+
+# 27. FINAL CREATIVE DIRECTION
+
+The website should communicate this feeling:
+
+> A student quietly opens a website.
+>
+> They see a message:
+>
+> **"You may not remember every student..."**
+>
+> They choose their teacher.
+>
+> They see messages written specifically for that teacher.
+>
+> They scroll through memories, lessons, and words of gratitude.
+>
+> And eventually they reach:
+>
+> **"You may never know every moment you made a difference. But somewhere, someone remembers."**
+>
+> **Thank you for making a difference.**
+
+That emotional journey is more important than adding more features.
+
+---
+
+# FINAL REQUIREMENT
+
+Before finishing, make sure:
+
+* [ ] Landing page works
+* [ ] Teacher cards work
+* [ ] Teacher page works
+* [ ] URL-based teacher selection works
+* [ ] Messages render dynamically
+* [ ] Message filters work
+* [ ] Invalid teacher IDs are handled
+* [ ] Empty teacher states are handled
+* [ ] Navigation works
+* [ ] Mobile navigation works
+* [ ] Website is fully responsive
+* [ ] No horizontal overflow
+* [ ] Images load from `/images`
+* [ ] Animations are subtle
+* [ ] Accessibility basics are implemented
+* [ ] No external frameworks are used
+* [ ] No backend is required
+* [ ] Code is clean and easy to modify
+
+The final result should feel like a **premium, heartfelt digital Teachers' Day tribute**, not a generic school website.
+
+## THE ONE SENTENCE THAT SHOULD GUIDE THE ENTIRE DESIGN:
+
+**"We're not building a website about Teachers' Day; we're building a place where teachers can finally see the difference they made."**

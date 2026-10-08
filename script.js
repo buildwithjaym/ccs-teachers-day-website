@@ -240,6 +240,120 @@ Thank you for everything, Ma'am Hanada. We miss you, we appreciate you, and we w
 },
 
 
+
+
+
+"0888":{
+
+name:"Ma'am Janice",
+
+image:
+"images/teachers/janice.jpg",
+
+message:
+`Hi Ma'am Janice!
+
+Happy Teachers' Day po! ❤️
+
+First of all, me and Angel are genuinely so happy and proud that you are now officially part of the faculty. From being our Governor before to becoming one of our instructors, it is honestly amazing to see how far you have come.
+
+And now, here you are, celebrating your very first Teachers' Day as a teacher. We really wanted this day to be something memorable for you because we know this is just the beginning of a new and exciting chapter in your life.
+
+Ma'am, you truly deserve this. We have seen how hardworking, responsible, and dedicated you are, even before you became an instructor. You have always been someone who was willing to take responsibility and help others, so seeing you now standing in front of a class and sharing what you know feels very natural.
+
+Your journey from being a student, to becoming a Governor, and now becoming an instructor is something you should be proud of. You worked for it, and now you finally get to experience what it feels like to be on the other side of the classroom.
+
+Me and Angel are very happy that we get to witness this part of your journey. We hope that as you continue teaching, you will always remember why you started. There may be stressful days, difficult students, and moments when you question yourself, but we hope you never forget that you are capable and that you have something valuable to share with your students.
+
+And please don't forget that you don't have to be the perfect teacher right away. This is your first chapter, and you are allowed to learn, make mistakes, improve, and grow along the way. What matters is that you continue teaching with the same heart and dedication that brought you here.
+
+We are really proud of you, Ma'am Janice. From being someone we looked up to as our Governor, now we are happy to call you one of our instructors.
+
+May this first Teachers' Day be the beginning of many more Teachers' Days, more students to inspire, and more achievements to come.
+
+Congratulations on this new chapter, Ma'am, and Happy Teachers' Day! ❤️
+
+Me and Angel are truly happy for you, and we hope that this little message reminds you that your first Teachers' Day is already something worth remembering. Welcome to the faculty, Ma'am Janice! You truly deserve to be here. ❤️
+
+`
+
+},
+
+
+
+
+
+
+"1111":{
+
+name:"Sir Beto",
+
+image:
+"images/teachers/beto.jpg",
+
+message:
+`Hi Sir Beto!
+
+Happy Teachers' Day po! ❤️
+
+We just want to take this opportunity to say thank you for everything you have done for us, especially for being our Software Engineering teacher and also our coach during the Hack4Gov competition.
+
+Thank you, Sir, for sharing your knowledge with us and for helping us understand that software development is not just about writing code. You taught us how to think about the bigger picture, how to build something properly, and how important it is to create systems that can actually solve real problems.
+
+We are also very thankful that we got to experience having you as our coach during Hack4Gov. Thank you for your guidance, suggestions, patience, and for believing in us throughout the competition. Having someone who can guide and push us when things get difficult really made a difference. The experience became more meaningful because we got to learn from you along the way.
+
+Me and Angel truly appreciate all the time and effort you gave us. Some of the things you taught us may be lessons that we will continue to use even after college, especially when we start building systems and working on real projects.
+
+And of course, Sir, congratulations pud sa inyong happy love life! WHAHAHAHA. We are genuinely happy for you. At least, Sir, naa na gyud tay someone nga mag-support sa imo outside the classroom. Hehehe. We hope you continue to be happy and that everything goes well for you both.
+
+Thank you for being our teacher, our coach, and someone who helped us grow as students and future developers. We are truly grateful that we got the chance to learn from you.
+
+Happy Teachers' Day, Sir Beto! And congratulations pud sa love life. WHAHAHAHA. More blessings, more achievements, and more happiness to come, Sir! ❤️
+
+`
+
+},
+
+
+"5555":{
+
+name:"Maam Isnal",
+
+image:
+"images/teachers/logo.jpg",
+
+message:
+`Hi Ma'am Isnal!
+
+Happy Teachers' Day po! ❤️
+
+Ma'am, this is Angel. I really want to take this opportunity to personally say thank you for everything you have done for me. You were not just a teacher to me. You really felt like a second mother, especially during the times when I needed someone to listen, understand, and give me advice.
+
+You know, Ma'am, I really appreciate how you always made time for us, not only when it came to school and academics, but also when we had personal problems or things that were bothering us. There were times when I just needed someone to listen to my stories, frustrations, and life problems, and you were always there. You listened without making me feel judged, and sometimes your simple advice was already enough to make me feel better.
+
+Thank you for caring for us in a way that goes beyond being our teacher. You always checked on us, reminded us when we needed it, and taught us things that were not always written in our lessons. You taught us with patience, but at the same time, you also cared for us like your own children.
+
+Honestly, Ma'am, I am very thankful that I got to have a teacher like you. There are teachers who teach you lessons that you will remember for a semester, but there are also teachers who leave an impact on you as a person. For me, you are one of those teachers.
+
+Thank you for all the times you listened to me, for every advice, for every reminder, and even for the times you simply asked how I was doing. Those little things meant more to me than you probably realized.
+
+And Ma'am, I hope you know that I also appreciate you as a person, not just as my teacher. You have shown me that being a good teacher is not only about teaching what is inside the classroom. Sometimes, it is also about being there for your students when life outside the classroom becomes difficult.
+
+Me and Jaymar are really grateful that we got to experience your teaching, but personally, Ma'am, I will always be especially thankful for the way you treated me with genuine care. You became someone I could talk to, someone I could trust, and someone who made me feel that I had another person in school who cared about me.
+
+Thank you so much, Ma'am Isnal, for being our teacher, our listener, our adviser in life sometimes, and most importantly, for being like a second mother to us. ❤️
+
+I hope you know how much you are appreciated and loved by your students. We may not always say it, but we will always remember the kindness, care, and love you gave us.
+
+Happy Teachers' Day, Ma'am Isnal! Thank you for everything. I am really, really grateful that I got to be one of your students. ❤️
+
+
+`
+
+},
+
+
+
 };
 
 

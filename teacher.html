@@ -1,16 +1,17 @@
 <!doctype html>
+
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
 
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>Happy Teacher's Day | Appreciation Vault</title>
+    <title>Happy Teachers' Day | Appreciation Vault</title>
 
     <link rel="stylesheet" href="teacher.css" />
 
     <link
-      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&family=Playfair+Display:wght@600;700&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;800&family=Inter:wght@400;500;600&display=swap"
       rel="stylesheet"
     />
 
@@ -18,27 +19,24 @@
   </head>
 
   <body>
-    <!-- BACKGROUND -->
-
     <div class="background-grid"></div>
 
     <div id="heart-container"></div>
 
-    <!-- INTRO SCREEN -->
-
     <div class="transition-screen">
       <h1>A GIFT AWAITS YOU</h1>
 
-      <p>Prepared with gratitude by the both of us.</p>
+      <p>Prepared with gratitude by Angel & Jaymar</p>
     </div>
 
-    <!-- MUSIC -->
+ <!-- BACKGROUND MUSIC -->
 
-    <audio id="teacherMusic"></audio>
+<audio 
+id="teacherMusic"
+src="assets/music/music.mp3">
+</audio>
 
     <main class="teacher-page">
-      <!-- HERO SECTION -->
-
       <section class="hero-section">
         <div class="hero-content">
           <p class="hero-label">With deepest appreciation from your students</p>
@@ -62,12 +60,10 @@
         </div>
       </section>
 
-      <!-- TEACHER PROFILE -->
-
       <section class="teacher-section">
         <div class="teacher-card">
           <div class="teacher-image-wrapper">
-            <img id="teacherImage" src="" alt="Teacher portrait" />
+            <img id="teacherImage" alt="Teacher" />
           </div>
 
           <h2 id="teacherName">Teacher Name</h2>
@@ -82,24 +78,16 @@
         </div>
       </section>
 
-      <!-- LETTER SECTION -->
-
       <section class="letter-section">
         <div class="letter-heading">
-          <h2>A Letter Written for You</h2>
+          <h2>A Letter Written For You</h2>
 
           <p>Opened with care, written from the heart.</p>
         </div>
 
         <div class="envelope-shell" id="envelope">
-          <!-- LETTER PAPER -->
-
           <div class="letter-paper">
-            <button
-              class="close-letter"
-              id="closeLetter"
-              aria-label="Close letter"
-            >
+            <button id="closeLetter" class="close-letter">
               <i data-lucide="x"></i>
             </button>
 
@@ -109,7 +97,7 @@
               <h3 class="letter-greeting">
                 Dear
 
-                <span id="letterName"> Teacher </span>,
+                <span id="letterName"> Teacher </span>
               </h3>
 
               <div id="message" class="letter-body"></div>
@@ -117,12 +105,10 @@
               <div class="letter-signoff">
                 <p>With love and appreciation,</p>
 
-                <p class="letter-from">Angel &amp; Jaymar</p>
+                <p class="letter-from">Angel & Jaymar</p>
               </div>
             </div>
           </div>
-
-          <!-- ENVELOPE DESIGN -->
 
           <div class="envelope-back"></div>
 
@@ -137,28 +123,24 @@
 
             <h3>A Letter For You</h3>
 
-            <button id="openLetter" type="button">OPEN LETTER</button>
+            <button id="openLetter">OPEN LETTER</button>
           </div>
         </div>
       </section>
-
-      <!-- ENDING SECTION -->
 
       <section class="ending-section">
         <div class="ending-card">
           <i data-lucide="heart-handshake"></i>
 
-          <h2>Thank You for Everything</h2>
+          <h2>Thank You For Everything</h2>
 
           <p>
-            The lessons you taught go far beyond the classroom. They live on in
+            The lessons you taught go beyond the classroom. They live on in
             every student you guided.
           </p>
         </div>
       </section>
     </main>
-
-    <!-- FOOTER SIGNATURE -->
 
     <footer class="footer-section">
       <div class="footer-content">
@@ -166,55 +148,21 @@
 
         <p class="footer-title">Made with love</p>
 
-        <p class="footer-text">Happy Teachers' Day — with lasting gratitude</p>
+        <p class="footer-text">Happy Teachers' Day with lasting gratitude</p>
 
         <div class="footer-creators">
-          <span> Created by </span>
-
-          <a
-            href="https://jaymmaruji.online"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Jaymar Maruji
-          </a>
+          <a href="https://jaymmaruji.online"> Jaymar Maruji </a>
 
           <span> & </span>
 
-          <a
-            href="https://angel-moreno-portfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
+          <a href="https://angel-moreno-portfolio.vercel.app/">
             Angel Moreno
           </a>
         </div>
-
-        <div class="footer-links">
-          <a
-            href="https://jaymmaruji.online"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            jaymmaruji.online
-          </a>
-
-          <span> • </span>
-
-          <a
-            href="https://angel-moreno-portfolio.vercel.app/"
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            angel-moreno-portfolio.vercel.app
-          </a>
-        </div>
-
-        <p class="footer-copy">© 2026 Appreciation Vault</p>
       </div>
     </footer>
 
-    <script src="teacher.js?asas"></script>
+    <script src="teacher.js"></script>
 
     <script>
       lucide.createIcons();

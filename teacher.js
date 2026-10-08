@@ -16,7 +16,8 @@ sessionStorage.getItem("teacher");
 if(!savedTeacher){
 
 
-window.location.href="index.html";
+window.location.href =
+"index.html";
 
 
 return;
@@ -27,7 +28,6 @@ return;
 
 
 let teacher;
-
 
 
 try{
@@ -41,10 +41,8 @@ JSON.parse(savedTeacher);
 }catch(error){
 
 
-
 console.error(
-"Teacher data error:",
-error
+"Invalid teacher data"
 );
 
 
@@ -55,14 +53,16 @@ sessionStorage.removeItem(
 
 
 
-window.location.href="index.html";
-
+window.location.href =
+"index.html";
 
 
 return;
 
 
 }
+
+
 
 
 
@@ -143,6 +143,9 @@ document.querySelector(
 
 
 
+
+
+
 /* =====================================
    LOAD TEACHER INFORMATION
 ===================================== */
@@ -150,6 +153,7 @@ document.querySelector(
 
 teacherImage.src =
 teacher.image;
+
 
 
 teacherImage.alt =
@@ -167,8 +171,14 @@ teacher.name;
 
 
 
+
+
+// LOAD MUSIC
+
 music.src =
-teacher.music;
+teacher.music ||
+"assets/music/music.mp3";
+
 
 
 music.load();
@@ -186,13 +196,13 @@ music.load();
 ===================================== */
 
 
-let opened=false;
+let opened = false;
 
 
-let typingTimer=null;
+let typingTimer = null;
 
 
-let heartsCreated=false;
+let heartsCreated = false;
 
 
 
@@ -217,7 +227,8 @@ return;
 
 
 
-opened=true;
+opened = true;
+
 
 
 
@@ -229,9 +240,11 @@ document.body.classList.add(
 
 
 
+
 letterSection.classList.add(
 "focus-letter"
 );
+
 
 
 
@@ -244,24 +257,7 @@ envelope.classList.add(
 
 
 
-
-music.volume=.3;
-
-
-
-
-music.play()
-.catch(()=>{
-
-
-console.log(
-"Music waiting for permission"
-);
-
-
-});
-
-
+playMusic();
 
 
 
@@ -270,8 +266,6 @@ console.log(
 typeMessage(
 teacher.message
 );
-
-
 
 
 
@@ -290,12 +284,48 @@ heartsCreated=true;
 
 
 
+});
+
+
+
+
+
+
+
+
+
+/* =====================================
+   PLAY MUSIC
+===================================== */
+
+
+function playMusic(){
+
+
+
+music.volume = 0.3;
+
+
+
+music.currentTime = 0;
+
+
+
+music.play()
+.catch(error=>{
+
+
+console.log(
+"Music requires user interaction",
+error
+);
 
 
 });
 
 
 
+}
 
 
 
@@ -320,7 +350,6 @@ return;
 
 
 
-
 opened=false;
 
 
@@ -334,10 +363,7 @@ typingTimer
 
 
 
-music.pause();
-
-
-music.currentTime=0;
+stopMusic();
 
 
 
@@ -351,8 +377,16 @@ letterSection.classList.add(
 
 
 
-setTimeout(
-()=>{
+setTimeout(()=>{
+
+
+
+document.body.classList.remove(
+"letter-open"
+);
+
+
+
 
 
 letterSection.classList.remove(
@@ -360,12 +394,6 @@ letterSection.classList.remove(
 "closing"
 );
 
-
-
-
-document.body.classList.remove(
-"letter-open"
-);
 
 
 
@@ -377,18 +405,40 @@ envelope.classList.remove(
 
 
 
+
 message.innerHTML="";
 
 
 
-},
-800
-);
-
+},800);
 
 
 
 });
+
+
+
+
+
+
+
+
+
+/* =====================================
+   STOP MUSIC
+===================================== */
+
+
+function stopMusic(){
+
+
+music.pause();
+
+
+music.currentTime = 0;
+
+
+}
 
 
 
@@ -410,7 +460,7 @@ message.innerHTML="";
 
 
 
-let index=0;
+let index = 0;
 
 
 
@@ -444,14 +494,11 @@ typingTimer
 
 
 
-
 typingTimer =
-setInterval(
-()=>{
+setInterval(()=>{
 
 
 if(index >= text.length){
-
 
 
 clearInterval(
@@ -460,16 +507,13 @@ typingTimer
 
 
 
-setTimeout(
-()=>{
+setTimeout(()=>{
 
 
 cursor.remove();
 
 
-},
-1000
-);
+},1000);
 
 
 
@@ -477,7 +521,6 @@ return;
 
 
 }
-
 
 
 
@@ -495,15 +538,11 @@ cursor
 
 
 
-
 index++;
 
 
 
-
-},
-48
-);
+},48);
 
 
 
@@ -518,7 +557,7 @@ index++;
 
 
 /* =====================================
-   HEART EFFECT
+   HEART ANIMATION
 ===================================== */
 
 
@@ -528,7 +567,7 @@ function createHearts(){
 
 for(
 let i=0;
-i<25;
+i<30;
 i++
 ){
 
@@ -538,7 +577,6 @@ const heart =
 document.createElement(
 "div"
 );
-
 
 
 
@@ -568,8 +606,8 @@ Math.random()*100+"vw";
 
 
 heart.style.fontSize =
-14+
-Math.random()*16+
+14 +
+Math.random()*18 +
 "px";
 
 
@@ -577,8 +615,8 @@ Math.random()*16+
 
 
 heart.style.animationDuration =
-5+
-Math.random()*3+
+5 +
+Math.random()*3 +
 "s";
 
 
@@ -594,7 +632,6 @@ heart.style.setProperty(
 
 
 
-
 document.body.appendChild(
 heart
 );
@@ -603,17 +640,13 @@ heart
 
 
 
-
-setTimeout(
-()=>{
+setTimeout(()=>{
 
 
 heart.remove();
 
 
-},
-8000
-);
+},8000);
 
 
 
@@ -622,9 +655,6 @@ heart.remove();
 
 
 }
-
-
-
 
 
 

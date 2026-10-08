@@ -27,9 +27,9 @@
     <!-- INTRO SCREEN -->
 
     <div class="transition-screen">
-      <h1>ACCESS GRANTED</h1>
+      <h1>A GIFT AWAITS YOU</h1>
 
-      <p>Preparing your appreciation vault...</p>
+      <p>Prepared with gratitude by the both of us.</p>
     </div>
 
     <!-- MUSIC -->
@@ -37,11 +37,11 @@
     <audio id="teacherMusic"></audio>
 
     <main class="teacher-page">
-      <!-- HERO -->
+      <!-- HERO SECTION -->
 
       <section class="hero-section">
         <div class="hero-content">
-          <p class="hero-label">A SPECIAL TRIBUTE FROM YOUR STUDENTS</p>
+          <p class="hero-label">With deepest appreciation from your students</p>
 
           <h1 class="hero-title">
             <span> HAPPY </span>
@@ -50,8 +50,8 @@
           </h1>
 
           <p class="hero-description">
-            Celebrating the teachers who inspire, guide, and make a lasting
-            difference.
+            For the patience you showed, the wisdom you shared, and the quiet
+            ways you changed our lives.
           </p>
 
           <div class="scroll-indicator">
@@ -67,35 +67,39 @@
       <section class="teacher-section">
         <div class="teacher-card">
           <div class="teacher-image-wrapper">
-            <img id="teacherImage" src="" alt="Teacher" />
+            <img id="teacherImage" src="" alt="Teacher portrait" />
           </div>
 
           <h2 id="teacherName">Teacher Name</h2>
 
-          <p>Your appreciation vault has been unlocked.</p>
+          <p>This space was made just for you.</p>
 
           <div class="teacher-badge">
             <i data-lucide="sparkles"></i>
 
-            <span> SPECIAL EDUCATOR </span>
+            <span> BELOVED EDUCATOR </span>
           </div>
         </div>
       </section>
 
-      <!-- LETTER -->
+      <!-- LETTER SECTION -->
 
       <section class="letter-section">
         <div class="letter-heading">
-          <h2>A Letter Prepared For You</h2>
+          <h2>A Letter Written for You</h2>
 
-          <p>A message created with gratitude.</p>
+          <p>Opened with care, written from the heart.</p>
         </div>
 
         <div class="envelope-shell" id="envelope">
-          <!-- PAPER -->
+          <!-- LETTER PAPER -->
 
           <div class="letter-paper">
-            <button class="close-letter" id="closeLetter">
+            <button
+              class="close-letter"
+              id="closeLetter"
+              aria-label="Close letter"
+            >
               <i data-lucide="x"></i>
             </button>
 
@@ -104,6 +108,7 @@
 
               <h3 class="letter-greeting">
                 Dear
+
                 <span id="letterName"> Teacher </span>,
               </h3>
 
@@ -117,7 +122,7 @@
             </div>
           </div>
 
-          <!-- ENVELOPE -->
+          <!-- ENVELOPE DESIGN -->
 
           <div class="envelope-back"></div>
 
@@ -137,129 +142,79 @@
         </div>
       </section>
 
-      <!-- END -->
+      <!-- ENDING SECTION -->
 
       <section class="ending-section">
         <div class="ending-card">
           <i data-lucide="heart-handshake"></i>
 
-          <h2>Thank You For Making A Difference</h2>
+          <h2>Thank You for Everything</h2>
 
-          <p>Your impact continues through every student you inspired.</p>
+          <p>
+            The lessons you taught go far beyond the classroom. They live on in
+            every student you guided.
+          </p>
         </div>
       </section>
     </main>
-    <!-- FOOTER -->
 
-<footer class="footer-section">
+    <!-- FOOTER SIGNATURE -->
 
+    <footer class="footer-section">
+      <div class="footer-content">
+        <i data-lucide="heart" class="footer-icon"> </i>
 
-<div class="footer-content">
+        <p class="footer-title">Made with love</p>
 
+        <p class="footer-text">Happy Teachers' Day — with lasting gratitude</p>
 
-<i data-lucide="heart" class="footer-icon"></i>
+        <div class="footer-creators">
+          <span> Created by </span>
 
+          <a
+            href="https://jaymmaruji.online"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Jaymar Maruji
+          </a>
 
+          <span> & </span>
 
-<p class="footer-title">
+          <a
+            href="https://angel-moreno-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            Angel Moreno
+          </a>
+        </div>
 
-Made with love
+        <div class="footer-links">
+          <a
+            href="https://jaymmaruji.online"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            jaymmaruji.online
+          </a>
 
-</p>
+          <span> • </span>
 
+          <a
+            href="https://angel-moreno-portfolio.vercel.app/"
+            target="_blank"
+            rel="noopener noreferrer"
+          >
+            angel-moreno-portfolio.vercel.app
+          </a>
+        </div>
 
+        <p class="footer-copy">© 2026 Appreciation Vault</p>
+      </div>
+    </footer>
 
-<p class="footer-text">
-
-Happy Teachers' Day
-
-</p>
-
-
-
-<div class="footer-creators">
-
-
-<span>
-Created by
-</span>
-
-
-<a 
-href="https://jaymmaruji.online"
-target="_blank">
-
-Jaymar Maruji
-
-</a>
-
-
-<span>
-&
-</span>
-
-
-<a
-href="https://angel-moreno-portfolio.vercel.app/"
-target="_blank">
-
-Angel Moreno
-
-</a>
-
-
-</div>
-
-
-
-
-
-<div class="footer-links">
-
-
-<a
-href="https://jaymmaruji.online"
-target="_blank">
-
-jaymmaruji.online
-
-</a>
-
-
-
-<span>
-•
-</span>
-
-
-
-<a
-href="https://angel-moreno-portfolio.vercel.app/"
-target="_blank">
-
-angel-moreno-portfolio.vercel.app
-
-</a>
-
-
-</div>
-
-
-
-<p class="footer-copy">
-
-© 2026 Appreciation Vault
-
-</p>
-
-
-
-</div>
-
-
-</footer>
-
-    <script src="teacher.js"></script>
+    <script src="teacher.js?asas"></script>
 
     <script>
       lucide.createIcons();

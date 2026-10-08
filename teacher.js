@@ -3,174 +3,65 @@ document.addEventListener(
 ()=>{
 
 
-/* ===============================
-   CHECK LOGIN DATA
-================================ */
+/* =====================================
+   GET TEACHER DATA
+===================================== */
 
 
 const savedTeacher =
 sessionStorage.getItem("teacher");
 
 
+
 if(!savedTeacher){
+
 
 window.location.href="index.html";
 
+
 return;
+
 
 }
 
 
 
-const teacher =
+let teacher;
+
+
+
+try{
+
+
+teacher =
 JSON.parse(savedTeacher);
 
 
 
+}catch(error){
 
 
-
-
-/* ===============================
-   TEACHER DATABASE
-================================ */
-
-
-const teachers = {
-
-
-"1259":{
-
-name:"Ma'am Matheen",
-
-image:
-"images/teachers/matheen.jpg",
-
-music:
-"assets/music/music.mp3",
-
-
-message:
-`Thank you for your patience,
-guidance, and kindness.
-
-You taught us more than lessons.
-
-You helped us believe in ourselves
-and become better individuals.
-
-Your dedication and passion
-will always be remembered.
-
-Happy Teachers' Day.`
-
-},
-
-
-
-
-
-"2468":{
-
-
-name:"Ma'am Jolo",
-
-image:
-"assets/teachers/jolo.jpg",
-
-music:
-"assets/music/music.mp3",
-
-
-message:
-`Thank you for inspiring us
-and guiding us throughout our journey.
-
-Your lessons and encouragement
-will always stay with us.
-
-Happy Teachers' Day.`
-
-},
-
-
-
-
-
-"3579":{
-
-
-name:"Ma'am Abah",
-
-image:
-"assets/teachers/abah.jpg",
-
-music:
-"assets/music/music.mp3",
-
-
-message:
-`Your kindness and wisdom
-have left a lasting mark on us.
-
-Thank you for believing in your students
-and guiding us with patience and care.
-
-Happy Teachers' Day.`
-
-},
-
-
-
-
-
-"4680":{
-
-
-name:"Ma'am Buddin",
-
-image:
-"assets/teachers/buddin.jpg",
-
-music:
-"assets/music/music.mp3",
-
-
-message:
-`Thank you for the knowledge,
-support, and inspiration
-you shared with us.
-
-You made learning meaningful
-and helped shape who we are today.
-
-Happy Teachers' Day.`
-
-}
-
-
-};
-
-
-
-
-
-
-
-const data =
-teachers[teacher.code];
-
-
-
-if(!data){
 
 console.error(
-"Teacher not found",
-teacher.code
+"Teacher data error:",
+error
 );
+
+
+
+sessionStorage.removeItem(
+"teacher"
+);
+
+
+
+window.location.href="index.html";
+
+
 
 return;
 
+
 }
 
 
@@ -179,10 +70,9 @@ return;
 
 
 
-
-/* ===============================
+/* =====================================
    ELEMENTS
-================================ */
+===================================== */
 
 
 const teacherImage =
@@ -191,10 +81,12 @@ document.getElementById(
 );
 
 
+
 const teacherName =
 document.getElementById(
 "teacherName"
 );
+
 
 
 const letterName =
@@ -250,29 +142,33 @@ document.querySelector(
 
 
 
-/* ===============================
-   LOAD DATA
-================================ */
+
+/* =====================================
+   LOAD TEACHER INFORMATION
+===================================== */
 
 
 teacherImage.src =
-data.image;
+teacher.image;
 
 
 teacherImage.alt =
-data.name;
+teacher.name;
+
 
 
 teacherName.textContent =
-data.name;
+teacher.name;
+
 
 
 letterName.textContent =
-data.name;
+teacher.name;
+
 
 
 music.src =
-data.music;
+teacher.music;
 
 
 music.load();
@@ -284,14 +180,17 @@ music.load();
 
 
 
-/* ===============================
+
+/* =====================================
    STATES
-================================ */
+===================================== */
 
 
 let opened=false;
 
+
 let typingTimer=null;
+
 
 let heartsCreated=false;
 
@@ -302,9 +201,10 @@ let heartsCreated=false;
 
 
 
-/* ===============================
+
+/* =====================================
    OPEN LETTER
-================================ */
+===================================== */
 
 
 openButton.addEventListener(
@@ -316,7 +216,9 @@ if(opened)
 return;
 
 
+
 opened=true;
+
 
 
 
@@ -326,9 +228,11 @@ document.body.classList.add(
 
 
 
+
 letterSection.classList.add(
 "focus-letter"
 );
+
 
 
 
@@ -339,30 +243,52 @@ envelope.classList.add(
 
 
 
+
+
 music.volume=.3;
 
 
 
+
 music.play()
-.catch(
-()=>{}
+.catch(()=>{
+
+
+console.log(
+"Music waiting for permission"
+);
+
+
+});
+
+
+
+
+
+
+
+typeMessage(
+teacher.message
 );
 
 
 
-startTyping(
-data.message
-);
+
 
 
 
 if(!heartsCreated){
 
+
 createHearts();
+
 
 heartsCreated=true;
 
+
 }
+
+
 
 
 
@@ -376,9 +302,12 @@ heartsCreated=true;
 
 
 
-/* ===============================
+
+
+
+/* =====================================
    CLOSE LETTER
-================================ */
+===================================== */
 
 
 closeButton.addEventListener(
@@ -391,13 +320,17 @@ return;
 
 
 
+
 opened=false;
+
 
 
 
 clearInterval(
 typingTimer
 );
+
+
 
 
 
@@ -408,9 +341,13 @@ music.currentTime=0;
 
 
 
+
+
 letterSection.classList.add(
 "closing"
 );
+
+
 
 
 
@@ -425,19 +362,29 @@ letterSection.classList.remove(
 
 
 
+
+document.body.classList.remove(
+"letter-open"
+);
+
+
+
+
 envelope.classList.remove(
 "open"
 );
 
 
 
-message.textContent="";
+
+message.innerHTML="";
 
 
 
 },
 800
 );
+
 
 
 
@@ -451,12 +398,12 @@ message.textContent="";
 
 
 
-/* ===============================
-   TYPE EFFECT
-================================ */
+/* =====================================
+   TYPEWRITER EFFECT
+===================================== */
 
 
-function startTyping(text){
+function typeMessage(text){
 
 
 message.innerHTML="";
@@ -464,6 +411,8 @@ message.innerHTML="";
 
 
 let index=0;
+
+
 
 
 
@@ -495,6 +444,7 @@ typingTimer
 
 
 
+
 typingTimer =
 setInterval(
 ()=>{
@@ -503,15 +453,19 @@ setInterval(
 if(index >= text.length){
 
 
+
 clearInterval(
 typingTimer
 );
 
 
+
 setTimeout(
 ()=>{
 
+
 cursor.remove();
+
 
 },
 1000
@@ -521,23 +475,24 @@ cursor.remove();
 
 return;
 
+
 }
 
 
 
 
 
-const letter =
-document.createTextNode(
-text[index]
-);
-
-
 
 message.insertBefore(
-letter,
+
+document.createTextNode(
+text[index]
+),
+
 cursor
+
 );
+
 
 
 
@@ -545,8 +500,9 @@ index++;
 
 
 
+
 },
-40
+48
 );
 
 
@@ -561,10 +517,9 @@ index++;
 
 
 
-
-/* ===============================
+/* =====================================
    HEART EFFECT
-================================ */
+===================================== */
 
 
 function createHearts(){
@@ -586,15 +541,22 @@ document.createElement(
 
 
 
+
 heart.className =
 "heart";
 
 
 
+
+
 heart.textContent =
-Math.random()>.3
-?"♥"
-:"♡";
+Math.random()>0.3
+?
+"♥"
+:
+"♡";
+
+
 
 
 
@@ -603,31 +565,33 @@ Math.random()*100+"vw";
 
 
 
+
+
 heart.style.fontSize =
-(
 14+
-Math.random()*18
-)
-+"px";
+Math.random()*16+
+"px";
+
+
 
 
 
 heart.style.animationDuration =
-(
 5+
-Math.random()*3
-)
-+"s";
+Math.random()*3+
+"s";
+
+
 
 
 
 heart.style.setProperty(
 "--drift",
-(
-Math.random()-.5
-)*120
-+"px"
+(Math.random()-.5)*120+"px"
 );
+
+
+
 
 
 
@@ -638,10 +602,14 @@ heart
 
 
 
+
+
 setTimeout(
 ()=>{
 
+
 heart.remove();
+
 
 },
 8000
@@ -654,6 +622,8 @@ heart.remove();
 
 
 }
+
+
 
 
 
